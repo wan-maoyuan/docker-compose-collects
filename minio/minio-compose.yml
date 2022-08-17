@@ -1,0 +1,13 @@
+version: '3'
+services:
+  minio_compose:
+    image: minio/minio
+    container_name: minio_compose
+    ports:
+      - 9000:9000
+      - 9001:9001
+    command: server /data --console-address ":9001"
+    restart: always
+    environment:
+      - "MINIO_ACCESS_KEY=admin"
+      - "MINIO_SECRET_KEY=12345678"
