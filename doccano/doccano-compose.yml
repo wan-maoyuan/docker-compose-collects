@@ -1,0 +1,12 @@
+version: '3'
+services:
+  mysql_compose:
+    image: doccano/doccano:nightly
+    container_name: doccano
+    ports:
+      - 8000:8000
+    environment:
+      - "ADMIN_USERNAME=admin"
+      - "ADMIN_PASSWORD=123456"
+      - "ADMIN_EMAIL=wanmaoyuan@outlook.com"
+
