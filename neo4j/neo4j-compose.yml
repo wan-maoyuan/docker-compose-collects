@@ -1,0 +1,23 @@
+version: '3'
+services:
+  mysql_compose:
+    image: neo4j:5.1.0
+    container_name: neo4j
+    ports:
+      - 7474:7474
+      - 7687:7687
+    # volumes:
+      # 数据文件挂载
+      # - ./data:/data
+      # 日志文件挂载
+      # - ./logs:/logs
+      # 配置文件挂载
+      # - ./conf:/var/lib/neo4j/conf
+      # 挂载 my.cnf 配置文件
+      # - ./docker/mysql/source:/docker-entrypoint-initdb.d
+      # 挂载数据导入目录
+      # - ./import:/var/lib/neo4j/import
+    environment:
+      # 设置账号密码
+      - "NEO4J_AUTH=neo4j/123456"
+
