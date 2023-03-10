@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+ oasis:
+  image: machengim/oasis:v0.2.6
+  container_name: oasis
+  restart: always
+  ports:
+    - 9000:8000
+  volumes:
+    - /data/docker/oasis/db:/opt/oasis/data
+    - /data/docker/oasis/file:/home/storage
