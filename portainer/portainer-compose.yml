@@ -1,0 +1,12 @@
+version: '3'
+services:
+  portainer_compose:
+    image: portainer/portainer:latest
+    container_name: portainer
+    ports:
+      - 9000:9000
+    restart: always
+    volumes:
+      # 文件挂载
+      - /var/run/docker.sock:/var/run/docker.sock
+
